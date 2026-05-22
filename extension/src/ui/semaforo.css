@@ -1,0 +1,25 @@
+/* Container do semáforo */
+
+.semaforo-container {
+  position: fixed;          /* fixa na tela (não rola com a página) */
+  top: 20px;                /* distância do topo */
+  right: 20px;              /* distância da direita */
+  z-index: 999999999;       /* garante que fica acima de tudo */
+
+  background: #222;         /* fundo escuro */
+  padding: 10px;            /* espaço interno */
+  border-radius: 15px;      /* borda arredondada */
+
+  display: flex;            /* layout flexível */
+  flex-direction: column;   /* empilha as luzes verticalmente */
+  gap: 10px;                /* espaço entre as luzes */
+}
+
+/* Estilo base de cada luz (bolinha) */
+.light {
+  width: 50px;              /* largura */
+  height: 50px;             /* altura */
+  border-radius: 50%;       /* transforma em círculo */
+  background: #555;         /* começa cinza (desligado) */
+  border: 3px solid #333;   /* borda pra dar destaque */
+}
