@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Check It",
+    "description": "Extensão para avaliar a credibilidade de notícias e informações online.",
+    "version": "1.0.0",
+
+    //Se implementarmos um botão para o usuário clicar, adicionar o action abaixo:
+    // "action": {
+    //}
+
+    //Adicionar quando implementarmos a lógica por trás da extensão, para rodar em segundo plano:
+    //  "background": {
+    //     "service_worker": ""
+    // },
+
+    //Permissões necessárias para a extensão funcionar corretamente
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+
+    "host_permissions": [
+        "https://*/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
