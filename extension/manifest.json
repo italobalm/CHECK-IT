@@ -1,27 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Check It",
-    "description": "Extensão para avaliar a credibilidade de notícias e informações online.",
-    "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Check It",
+  "description": "Extensão para avaliar a credibilidade de notícias e informações online.",
+  "version": "1.0.0",
 
-    "permissions": [
-        "activeTab",
-        "scripting",
-        "storage"
-    ],
+  "permissions": ["activeTab", "scripting", "storage"],
 
-    "host_permissions": [
-        "https://*/*"
-    ],
+  "host_permissions": ["https://*/*"],
 
-    "content_scripts": [
-        {
-            "matches": ["https://*/*"],
-            "js": [
-                "src/ui/semaforo.js",
-                "src/content/content.js"],
-            "css": ["src/ui/semaforo.css"],
-            "run_at": "document_idle"
-        }
-    ]
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["src/ui/semaforo.js", "src/content/content.js"],
+      "css": ["src/ui/semaforo.css"],
+      "run_at": "document_idle"
+    }
+  ]
 }

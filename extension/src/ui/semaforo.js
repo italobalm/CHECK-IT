@@ -1,7 +1,6 @@
 //Cria o semáforo na tela
 
 function createTrafficLight() {
-
   const existing = document.getElementById("checkit-semaforo");
 
   // evita duplicação, caso o semáforo já exista na página
@@ -9,10 +8,10 @@ function createTrafficLight() {
 
   // container principal
   const container = document.createElement("div");
-  container.id = "checkit-semaforo"; 
+  container.id = "checkit-semaforo";
   container.className = "semaforo-container";
 
- //Cria cada luz do semáforo
+  //Cria cada luz do semáforo
   function createLight(id) {
     const light = document.createElement("div");
     light.id = id;
@@ -36,7 +35,6 @@ function createTrafficLight() {
 
 //Atualiza o semáforo conforme resposta recebida
 function updateTrafficLight(status) {
-
   // pega as luzes pelos IDs
   const red = document.getElementById("checkit-light-red");
   const yellow = document.getElementById("checkit-light-yellow");
@@ -51,7 +49,6 @@ function updateTrafficLight(status) {
 
   // lógica para acender a luz correta com base no status recebido
   switch (status) {
-
     case "resultadoBaixo":
     case "credibilidadeBaixa":
       red.style.background = "red";

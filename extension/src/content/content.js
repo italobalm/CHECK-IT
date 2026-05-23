@@ -8,3 +8,16 @@ createTrafficLight();
 setTimeout(() => {
   updateTrafficLight("credibilidadeBaixa");
 }, 2000);
+
+const title = document.title;
+const url = window.location.href;
+
+chrome.storage.local.set(
+  {
+    pageTitle: title,
+    pageUrl: url,
+  },
+  () => {
+    console.log("Salvo!", { title, url });
+  },
+);
