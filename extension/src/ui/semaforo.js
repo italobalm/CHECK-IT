@@ -1,3 +1,4 @@
+// semaforo.js
 //Cria o semáforo na tela
 
 function createTrafficLight() {

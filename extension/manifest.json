@@ -10,9 +10,15 @@
         "storage"
     ],
 
-    "host_permissions": [
-        "https://*/*"
-    ],
+"host_permissions": [
+    "https://*/*",
+    "http://localhost:3000/*"
+],
+
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+
 
     "content_scripts": [
         {

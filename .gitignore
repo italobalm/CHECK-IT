@@ -1,1 +1,24 @@
+# dependências
+node_modules/
+
+# variáveis de ambiente
 .env
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# build
+dist/
+build/
+
+# vscode
+.vscode/
+
+# coverage
+coverage/
