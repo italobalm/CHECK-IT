@@ -1,0 +1,50 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: performance-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 10 iterations shared among 5 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<3000' p(95)=145.24ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 10      34.973436/s
+    checks_succeeded...: 100.00% 10 out of 10
+    checks_failed......: 0.00%   0 out of 10
+
+    ✓ status 200
+
+    HTTP
+    http_req_duration..............: avg=117.23ms min=84.22ms med=127ms    max=145.5ms  p(90)=144.99ms p(95)=145.24ms
+      { expected_response:true }...: avg=117.23ms min=84.22ms med=127ms    max=145.5ms  p(90)=144.99ms p(95)=145.24ms
+    http_req_failed................: 0.00%  0 out of 10
+    http_reqs......................: 10     34.973436/s
+
+    EXECUTION
+    iteration_duration.............: avg=132.4ms  min=84.22ms med=142.06ms max=175.24ms p(90)=174.6ms  p(95)=174.92ms
+    iterations.....................: 10     34.973436/s
+
+    NETWORK
+    data_received..................: 5.3 kB 19 kB/s
+    data_sent......................: 2.6 kB 9.1 kB/s
+
+
+
+
+running (00m00.3s), 0/5 VUs, 10 complete and 0 interrupted iterations
+default ✓ [ 100% ] 5 VUs  00m00.3s/10m0s  10/10 shared iters

@@ -1,0 +1,52 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: cache-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 iters, 1 per VU
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 4       3.397469/s
+    checks_succeeded...: 100.00% 4 out of 4
+    checks_failed......: 0.00%   0 out of 4
+
+    ✓ primeira status 200
+    ✓ segunda status 200
+    ✓ segunda mais rápida
+    ✓ mesmo resultado
+
+    HTTP
+    http_req_duration..............: avg=75.58ms min=54.24ms med=75.58ms max=96.93ms p(90)=92.66ms p(95)=94.8ms
+      { expected_response:true }...: avg=75.58ms min=54.24ms med=75.58ms max=96.93ms p(90)=92.66ms p(95)=94.8ms
+    http_req_failed................: 0.00%  0 out of 2
+    http_reqs......................: 2      1.698735/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.17s   min=1.17s   med=1.17s   max=1.17s   p(90)=1.17s   p(95)=1.17s 
+    iterations.....................: 1      0.849367/s
+    vus............................: 1      min=1      max=1
+    vus_max........................: 1      min=1      max=1
+
+    NETWORK
+    data_received..................: 1.1 kB 900 B/s
+    data_sent......................: 452 B  384 B/s
+
+
+
+
+running (00m01.2s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m01.2s/10m0s  1/1 iters, 1 per VU

@@ -16,6 +16,21 @@ const model = genAI.getGenerativeModel({
 
 export async function analyzeNews(data) {
 
+  // MODO TESTE (so funciona se .env : MODE_TEST = true)
+  if (process.env.TEST_MODE === "true") {
+
+    return {
+      multiplasFontes: true,
+      fonteConfiavel: true,
+      semSensacionalismo: true,
+      possuiFontes: true,
+      possuiAutorEData: true,
+      score: 7,
+      credibilidade: "credibilidadeAlta",
+      explicacao: "mock teste"
+    };
+  }
+
   const prompt = `
 Você é um sistema especialista em detecção de fake news e desinformação.
 
