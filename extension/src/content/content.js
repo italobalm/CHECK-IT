@@ -79,6 +79,6 @@ window.addEventListener("load", () => {
 
     analyzePage();
 
-  }, 3000);
+  }, 1500);
 
 });

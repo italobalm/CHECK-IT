@@ -7,18 +7,15 @@ chrome.runtime.onMessage.addListener(
       try {
 
         const response = await fetch(
-          "http://localhost:3000/analyze",
-          {
-
-            method: "POST",
-
-            headers: {
-              "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(message.payload)
-          }
-        );
+  "https://check-it-0abb.onrender.com/analyze",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(message.payload)
+  }
+);
 
         const data = await response.json();
 
