@@ -1,46 +1,48 @@
 # CHECK-IT - Backend
 
-Sistema de verificação de credibilidade e checagem de informações.
+Information Credibility Verification and Fact-Checking System.
 
-## Sobre o Projeto
+## About the Project
 
-O CHECK-IT é um backend desenvolvido para auxiliar na análise e verificação de credibilidade de informações, utilizando serviços de pontuação e utilitários para limpeza de respostas de IA.
+CHECK-IT is a backend application developed to support the analysis and verification of information credibility, using scoring services and utilities for cleaning AI-generated responses.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - Node.js
-- Jest (Testes Unitários)
+- Jest (Unit Testing)
 - JavaScript
 
-## Como Instalar e Executar
+## Installation and Execution
 
-### Pré-requisitos
-- Node.js (versão 18 ou superior)
+### Prerequisites
 
-### Passos
+- Node.js (version 18 or higher)
+
+### Steps
 
 ```bash
-# Clone o repositório
-git clone https://github.com/SEU_USUARIO/check-it.git
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/check-it.git
 
-# Entre na pasta do backend
+# Navigate to the backend folder
 cd check-it/backend
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Execute os testes unitários
+# Run unit tests
 npm test
+```
 
-# Resultados dos Testes Unitários
+## Unit Test Results
 
-## Test Suites
+### Test Suites
 
 ```bash
 Test Suites: 2 passed, 2 total
 ```
 
-## Testes Executados
+### Executed Tests
 
 ```bash
 Tests: 9 passed, 9 total
@@ -49,25 +51,25 @@ Tests: 9 passed, 9 total
 ### cleanJson Utility
 
 ```bash
-✓ Deve remover marcadores ```json
-✓ Deve funcionar corretamente com JSON puro
-✓ Deve remover espaços extras no início e no final
-✓ Deve retornar "{}" para valores inválidos
+✓ Should remove ```json markers
+✓ Should work correctly with raw JSON
+✓ Should remove leading and trailing whitespace
+✓ Should return "{}" for invalid values
 ```
 
-### Score Service, Sistema de Credibilidade CHECK-IT
+### Score Service, CHECK-IT Credibility System
 
 ```bash
-✓ Deve retornar Alta Credibilidade com pontuação máxima (8)
-✓ Deve retornar Alta Credibilidade com pontuação mínima (6)
-✓ Deve retornar Média Credibilidade (5 pontos)
-✓ Deve retornar Baixa Credibilidade (0 pontos)
-✓ Deve tratar valores undefined/null como false
+✓ Should return High Credibility with maximum score (8)
+✓ Should return High Credibility with minimum score (6)
+✓ Should return Medium Credibility (5 points)
+✓ Should return Low Credibility (0 points)
+✓ Should treat undefined/null values as false
 ```
 
 ---
 
-# Cobertura de Testes
+# Test Coverage
 
 ```bash
 ------------------|---------|----------|---------|---------|
@@ -81,10 +83,60 @@ cleanJson.js      |   100   |   100    |   100   |   100   |
 ------------------|---------|----------|---------|---------|
 ```
 
-## Resumo
+## Coverage Summary
 
-- 100% de cobertura de statements
-- 100% de cobertura de branches
-- 100% de cobertura de funções
-- 100% de cobertura de linhas
-- Todos os testes executados com sucesso
+- 100% statement coverage
+- 100% branch coverage
+- 100% function coverage
+- 100% line coverage
+- All tests executed successfully
+
+## Project Structure
+
+```text
+backend/
+├── services/
+│   └── scoreService.js
+├── utils/
+│   └── cleanJson.js
+├── tests/
+│   ├── scoreService.test.js
+│   └── cleanJson.test.js
+├── package.json
+└── README.md
+```
+
+## Main Features
+
+- Information credibility scoring
+- Classification into credibility levels
+- AI response cleaning and normalization
+- Automated unit testing with Jest
+- Full test coverage (100%)
+- Modular and maintainable architecture
+
+## Credibility Levels
+
+| Score Range | Classification |
+|------------|---------------|
+| 6 - 8 | High Credibility |
+| 5 | Medium Credibility |
+| 0 - 4 | Low Credibility |
+
+## Testing
+
+To run the test suite:
+
+```bash
+npm test
+```
+
+To generate a coverage report:
+
+```bash
+npm test -- --coverage
+```
+
+## License
+
+This project was developed for academic and educational purposes as part of the CHECK-IT initiative.
