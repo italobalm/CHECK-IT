@@ -168,7 +168,7 @@ https://check-it-0abb.onrender.com
 
 ---
 
-## Core API Endpoints 📊
+## Core API Endpoints 
 
 | Method | Endpoint | Description |
 
